@@ -34,9 +34,3 @@ val Typography = Typography(
     )
     */
 )
-val sfCompact_font = FontFamily(
-    Font(R.font.sf_compact_bold, FontWeight.Bold),
-    Font(R.font.sf_compact_medium, FontWeight.Medium),
-    Font(R.font.sf_compact_thin, FontWeight.Thin),
-    Font(R.font.sf_compact_italic),
-)

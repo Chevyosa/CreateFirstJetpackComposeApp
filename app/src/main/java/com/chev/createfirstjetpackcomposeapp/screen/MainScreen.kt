@@ -64,7 +64,7 @@ fun MainScreen() {
                 fontWeight = FontWeight.Bold
             )
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(12.dp))
 
             Text(
                 text = "Please Input Name and Class at Below"
@@ -72,63 +72,59 @@ fun MainScreen() {
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            TextField(
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .shadow(10.dp, RoundedCornerShape(24.dp)),
-                label = {
-                    Text(text = "Please Input Student Name", color = Color.Black, fontSize = 12.sp)
-                },
-                value = inputName,
-                onValueChange = {
-                    inputName = it
-                },
-                colors = TextFieldDefaults.colors(
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
-                ),
-                shape = RoundedCornerShape(24.dp),
-                trailingIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(
-                            imageVector = Icons.Default.Create,
-                            contentDescription = "Enter Name"
-                        )
-                    }
-                }
-            )
+                    .fillMaxWidth(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.Start
+            ){
+                Text(text = "Input Student Name")
+                Spacer(modifier = Modifier.height(8.dp))
+                TextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .shadow(10.dp, RoundedCornerShape(24.dp)),
+                    value = inputName,
+                    onValueChange = {
+                        inputName = it
+                    },
+                    colors = TextFieldDefaults.colors(
+                        focusedIndicatorColor = Color.Transparent,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        focusedContainerColor = Color.White,
+                        unfocusedContainerColor = Color.White,
+                    ),
+                    shape = RoundedCornerShape(24.dp),
+                )
+            }
 
             Spacer(modifier = Modifier.height(8.dp))
 
-            TextField(
+            Column(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .shadow(10.dp, RoundedCornerShape(24.dp)),
-                label = {
-                    Text(text = "Please Input Student Class", color = Color.Black, fontSize = 12.sp)
-                },
-                value = inputClass,
-                onValueChange = {
-                    inputClass = it
-                },
-                colors = TextFieldDefaults.colors(
-                    focusedIndicatorColor = Color.Transparent,
-                    unfocusedIndicatorColor = Color.Transparent,
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
-                ),
-                shape = RoundedCornerShape(24.dp),
-                trailingIcon = {
-                    IconButton(onClick = {}) {
-                        Icon(
-                            imageVector = Icons.Default.Create,
-                            contentDescription = "Enter Class"
-                        )
-                    }
-                }
-            )
+                    .fillMaxWidth(),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.Start
+            ){
+                Text(text = "Input Student Class")
+                Spacer(modifier = Modifier.height(8.dp))
+                TextField(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .shadow(10.dp, RoundedCornerShape(24.dp)),
+                    value = inputClass,
+                    onValueChange = {
+                        inputClass = it
+                    },
+                    colors = TextFieldDefaults.colors(
+                        focusedIndicatorColor = Color.Transparent,
+                        unfocusedIndicatorColor = Color.Transparent,
+                        focusedContainerColor = Color.White,
+                        unfocusedContainerColor = Color.White,
+                    ),
+                    shape = RoundedCornerShape(24.dp),
+                )
+            }
 
             Spacer(modifier = Modifier.height(12.dp))
 
